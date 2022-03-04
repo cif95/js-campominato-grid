@@ -8,14 +8,37 @@
 
 const selectLevelElement = document.getElementById('game-level');
 const playBtn = document.querySelector('#play-btn');
+const grid = document.getElementById('grid');
 
 playBtn.addEventListener('click', function() {
+	grid.innerHTML = '';
 	if ( selectLevelElement.value == 'easy'){
-		console.log('easy');
+		
+		for ( let i = 1; i <= 100; i++) {
+			grid.appendChild(createGridBoxElement());
+		}
 	} else if ( selectLevelElement.value == 'intermediate' ){
-		console.log('intermediate');
+		for ( let i = 1; i <= 81; i++) {
+			grid.appendChild(createGridBoxElement());
+		}
 	} else if ( selectLevelElement.value == 'difficult') {
-		console.log('difficult');
+
+		for ( let i = 1; i <= 49; i++) {
+			grid.appendChild(createGridBoxElement());
+		}
 	}
 })
 
+
+/**
+ * function that creates a grid box element
+ * @returns a grid box element
+ */
+function createGridBoxElement () {
+	const gridBox = document.createElement('div');
+	gridBox.classList.add('cell');
+	gridBox.addEventListener('click', function(){
+		this.classList.add('clicked');
+	})
+	return gridBox;
+}

@@ -9,5 +9,16 @@ section#game .row{
 section#game div#grid{
 	height:500px;
 	width:500px;
+}
+
+section#game div#grid div.cell{
+	height:calc(100% / 10);
+	width:calc(100% / 10);
 	border:1px solid white;
+	float:left;
+}
+
+section#game div#grid div.cell.clicked{
+	color:white;
+	background-color: rgb(46, 134, 248);
 }
