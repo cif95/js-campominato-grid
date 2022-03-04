@@ -1,0 +1,13 @@
+body{
+	font-family: 'Raleway';
+}
+
+section#game .row{
+	height:75vh;
+}
+
+section#game div#grid{
+	height:500px;
+	width:500px;
+	border:1px solid white;
+}

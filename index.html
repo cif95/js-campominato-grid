@@ -15,14 +15,31 @@
 	<title>Js Campo Minato Grid</title>
 </head>
 <body>
+	<header>
+		<nav class="navbar navbar-light">
+			<div class="container-fluid px-4">
+				<a class="navbar-brand fs-2" href="#">Campo Minato</a>
+				<select id="game-level" class="form-select ms-auto w-25" aria-label="Default select example">
+					<option value="easy">Easy</option>
+					<option value="intermediate">Intermediate</option>
+					<option value="difficult">Difficult</option>
+				</select>
+				<button id="play-btn" class="btn btn-outline-danger ms-3" type="submit">Play</button>
+			</div>
+		</nav>
+	</header>
 	<main>
-		<div class="container-fluid">
-			<div class="row justify-content-center">
-				<div class="col">
+		<section id="game" class="bg-dark p-5">
+			<div class="container-fluid">
+				<div class="row justify-content-center align-items-center">
+					<div class="col-6">
+						<div id="grid" class="mx-auto"></div>
+					</div>
 				</div>
 			</div>
-		</div>
+		</section>
 	</main>
+	<footer></footer>
 	<script type="text/javascript" src="js/script.js"></script>
 </body>
 </html>
