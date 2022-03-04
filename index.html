@@ -16,30 +16,47 @@
 </head>
 <body>
 	<header>
+		<!-- top bar -->
 		<nav class="navbar navbar-light">
-			<div class="container-fluid px-4">
+			<div class="container-fluid px-5">
 				<a class="navbar-brand fs-2" href="#">Campo Minato</a>
-				<select id="game-level" class="form-select ms-auto w-25" aria-label="Default select example">
+				<!-- game level difficulty options -->
+				<select id="game-level" class="form-select ms-auto w-25" aria-label="game level select">
 					<option value="easy">Easy</option>
 					<option value="intermediate">Intermediate</option>
 					<option value="difficult">Difficult</option>
 				</select>
-				<button id="play-btn" class="btn btn-outline-danger ms-3" type="submit">Play</button>
+				<!-- play button -->
+				<button id="play-btn" class="btn btn-outline-danger ms-3">Play</button>
 			</div>
 		</nav>
 	</header>
+	<!-- / top bar -->
+	<!-- main -->
 	<main>
+		<!-- section game grid -->
 		<section id="game" class="bg-dark p-5">
 			<div class="container-fluid">
 				<div class="row justify-content-center align-items-center">
 					<div class="col-6">
+						<!-- grid -->
 						<div id="grid" class="mx-auto clearfix"></div>
 					</div>
 				</div>
 			</div>
 		</section>
 	</main>
-	<footer></footer>
+	<!-- / main -->
+	<!-- footer -->
+	<footer>
+		<div class="container-fluid px-5">
+			<div class="row pt-4">
+				<div class="col-12">
+					<h6>Made with &hearts;</h6>
+				</div>
+			</div>
+		</div>
+	</footer>
 	<script type="text/javascript" src="js/script.js"></script>
 </body>
 </html>
