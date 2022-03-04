@@ -16,6 +16,12 @@ section#game div#grid div.cell{
 	width:calc(100% / 10);
 	border:1px solid white;
 	float:left;
+	display: flex;
+	justify-content: center;
+	align-items:center;
+	text-align: center;
+	color:white;
+	font-size:.8rem;
 }
 
 section#game div#grid div.cell.clicked{

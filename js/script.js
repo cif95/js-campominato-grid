@@ -13,18 +13,20 @@ const grid = document.getElementById('grid');
 playBtn.addEventListener('click', function() {
 	grid.innerHTML = '';
 	if ( selectLevelElement.value == 'easy'){
-		
 		for ( let i = 1; i <= 100; i++) {
-			grid.appendChild(createGridBoxElement());
+			const gridBox = createGridBoxElement(i);
+			grid.appendChild(gridBox);
 		}
 	} else if ( selectLevelElement.value == 'intermediate' ){
 		for ( let i = 1; i <= 81; i++) {
-			grid.appendChild(createGridBoxElement());
+			const gridBox = createGridBoxElement(i);
+			grid.appendChild(gridBox);
 		}
 	} else if ( selectLevelElement.value == 'difficult') {
 
 		for ( let i = 1; i <= 49; i++) {
-			grid.appendChild(createGridBoxElement());
+			const gridBox = createGridBoxElement(i);
+			grid.appendChild(gridBox);
 		}
 	}
 })
@@ -34,11 +36,12 @@ playBtn.addEventListener('click', function() {
  * function that creates a grid box element
  * @returns a grid box element
  */
-function createGridBoxElement () {
+function createGridBoxElement (number) {
 	const gridBox = document.createElement('div');
 	gridBox.classList.add('cell');
 	gridBox.addEventListener('click', function(){
-		this.classList.add('clicked');
+		this.classList.toggle('clicked');
 	})
+	gridBox.innerHTML = `<span>${number}</span>`
 	return gridBox;
 }
