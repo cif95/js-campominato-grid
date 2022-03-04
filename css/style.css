@@ -15,8 +15,8 @@ section#game{
 }
 
 section#game div#grid{
-	height:500px;
-	width:500px;
+	height:550px;
+	width:550px;
 }
 
 section#game div#grid div.cell{
@@ -29,7 +29,7 @@ section#game div#grid div.cell{
 	align-items:center;
 	text-align: center;
 	color:white;
-	font-size:.8rem;
+	font-size:1rem;
 }
 
 section#game div#grid div.cell.clicked{

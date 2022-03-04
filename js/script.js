@@ -5,31 +5,36 @@
 // con difficoltà 3 => tra 1 e 49
 // Quando l'utente clicca su ogni cella, la cella cliccata si colora di azzurro.
 
-
 const levelSelectElement = document.getElementById('game-level');
 const playBtn = document.querySelector('#play-btn');
 const grid = document.getElementById('grid');
 
+
 playBtn.addEventListener('click', function() {
 	grid.innerHTML = '';
-	if ( levelSelectElement.value === 'easy'){
-		for ( let i = 1; i <= 100; i++) {
-			const gridBox = createGridBoxElement(i);
-			grid.appendChild(gridBox);
-		}
-	} else if ( levelSelectElement.value === 'intermediate' ){
-		for ( let i = 1; i <= 81; i++) {
-			const gridBox = createGridBoxElement(i);
-			grid.appendChild(gridBox);
-		}
-	} else if ( levelSelectElement.value === 'difficult') {
-		for ( let i = 1; i <= 49; i++) {
-			const gridBox = createGridBoxElement(i);
-			grid.appendChild(gridBox);
-		}
+	switch (levelSelectElement.value) {
+		case 'easy' :
+			for ( let i = 1; i <= 100; i++) {
+				const gridBox = createGridBoxElement(i);
+				grid.appendChild(gridBox);
+			}
+		break
+		case 'intermediate' :
+			for ( let i = 1; i <= 81; i++) {
+				const gridBox = createGridBoxElement(i);
+				grid.appendChild(gridBox);
+			}
+		break
+		case 'difficult' :
+			for ( let i = 1; i <= 49; i++) {
+				const gridBox = createGridBoxElement(i);
+				grid.appendChild(gridBox);
+			}
+		break
+		default :
+		console.log('No difficulty level has been selected');
 	}
 })
-
 
 /**
  * function that creates a div grid box as a dom element, that becomes blue when clicked and has an inner html content
