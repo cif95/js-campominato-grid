@@ -15,22 +15,25 @@
 	<title>Js Minesweeper Grid</title>
 </head>
 <body>
-	<header>
+	<header class="bg-dark">
 		<!-- top bar -->
-		<nav class="navbar navbar-light">
-			<div class="container-fluid px-5">
+		<nav class="navbar navbar-dark">
+			<div class="container-fluid px-md-5">
 				<a class="navbar-brand fs-2" href="#">
-					<img src="img/header.png" alt="">
-					Minesweeper</a>
+					<img src="img/header.png" alt="mine">
+					Minesweeper
+				</a>
 				<!-- game level difficulty options -->
-				<select id="game-level" class="form-select ms-auto w-25" aria-label="game level select">
+				<select id="game-level" class="form-select ms-auto w-25 bg-dark text-white" aria-label="game level select">
 					<option selected>Choose a difficulty level</option>
-					<option value="easy">Easy</option>
-					<option value="intermediate">Intermediate</option>
-					<option value="difficult">Difficult</option>
+					<option value="1">Easy</option>
+					<option value="2">Intermediate</option>
+					<option value="3">Difficult</option>
 				</select>
 				<!-- play button -->
-				<button id="play-btn" class="btn btn-outline-danger ms-3">Play</button>
+				<button id="play-btn" class="btn btn-danger ms-3">Play</button>
+				<!-- reset button -->
+				<button id="reset-btn" class="btn btn-outline-info ms-3">Reset</button>
 			</div>
 		</nav>
 	</header>
@@ -41,9 +44,10 @@
 		<section id="game" class="bg-dark">
 			<div class="container-fluid">
 				<div class="row justify-content-center align-items-center">
-					<div class="col-6">
+					<div class="col-12 col-lg-6">
 						<!-- grid -->
-						<div id="grid" class="mx-auto clearfix"></div>
+						<div id="grid" class="mx-auto clearfix pb-5"></div>
+						<div id="score"class="text-white fs-5 ms-5"></div>
 					</div>
 				</div>
 			</div>
@@ -51,8 +55,8 @@
 	</main>
 	<!-- / main -->
 	<!-- footer -->
-	<footer>
-		<div class="container-fluid px-5">
+	<footer class="bg-dark text-white">
+		<div class="container-fluid px-md-5">
 			<div class="row pt-4">
 				<div class="col-12">
 					<h6>Made with &hearts;</h6>

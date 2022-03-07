@@ -1,38 +1,48 @@
 body{
 	font-family: 'Raleway';
+	overflow: hidden;
 }
 
-header, footer{
+header, 
+footer{
 	height:8vh;
 }
 
-section#game .row{
-	height:84vh;
+header .navbar{
+	min-width:620px;
+	box-shadow: 3px 3px 15px 10px #03d0ff;
+}
+
+footer{
+	box-shadow: 3px 3px 20px 15px #03d0ff;
 }
 
 section#game{
 	height:100%;
 }
 
+section#game .row{
+	height:84vh;
+}
+
 section#game div#grid{
-	height:600px;
-	width:600px;
+	height:550px;
+	width:550px;
 }
 
 section#game div#grid div.cell{
-	height:calc(100% / 10);
-	width:calc(100% / 10);
-	border: 1px solid #03d0ff;
-	box-shadow: inset 0px 0px 5px 1px #03d0ff;
 	float:left;
-	display: flex;
-	justify-content: center;
-	align-items:center;
-	text-align: center;
+	cursor:pointer;
 	color:white;
 	font-size:.85rem;
+	display: flex;
+	align-items:center;
+	justify-content: center;
+	border: 1px solid #03d0ff;
+	box-shadow: inset 0px 0px 5px 1px #03d0ff;
 }
 
 section#game div#grid div.cell.clicked{
-	background-color: rgb(46, 134, 248);
+	color: black;
+	background-color: #6cdbf5;
 }
